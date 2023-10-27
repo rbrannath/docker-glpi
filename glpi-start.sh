@@ -12,7 +12,7 @@ fi
 
 SRC_GLPI=$(curl -s https://api.github.com/repos/glpi-project/glpi/releases/tags/${VERSION_GLPI} | jq .assets[0].browser_download_url | tr -d \")
 TAR_GLPI=$(basename ${SRC_GLPI})
-FOLDER_GLPI=glpi/
+FOLDER_GLPI=glpi/public
 FOLDER_WEB=/var/www/html/
 
 #check if TLS_REQCERT is present
